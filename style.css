@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+    font-family: Arial, sans-serif;    
+    text-align: center;    
+}
+
+.home-section {
+    height: 100vh;
+    background: url('media/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    margin: 0;
+    padding: 0; 
+}
+
+header {
+    position: fixed; /* Keeps it over the background */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centers it horizontally */
+    width: 100%; /* Prevents full width */
+    padding: 5px;
+    background: rgba(247, 221, 221, 0.8); /* Ensures no background color */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Centers content */
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    width: 100px; 
+    height: auto;
+}
+
+.logo img {
+    width: 100%; 
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Ensures the nav buttons are centered */
+    width: 100%;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center
+}
+
+nav ul li {
+    display: inline;
+}
+
+.nav-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: rgb(198, 148, 145);
+    color: black;
+} 
+
+.title-box {
+    margin-top: 100px;
+    font-size: 56px;
+    font-weight: bold;
+    white-space: pre-line;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-line1 {
+    font-family: 'Georgia', serif;
+}
+
+.title-line2 {
+    font-family: 'Papyrus', fantasy;
+    text-align: center;
+}
+
+.about-container {
+    background-color: rgb(245, 196, 196);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px;
+    margin-top: 0;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 5px solid black;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    color: gray;
+}
+
+.about-text {
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+    font-family: 'Georgia', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.watch-container {
+    background-color: #c7cbd2; 
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.watch-title {
+    font-size: 36px;
+    margin-bottom: 35px;
+    font-family: 'Georgia', serif;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container iframe {
+    border-radius: 15px;            /* Rounds the corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); 
+    overflow: hidden;               /* Ensures rounded corners are visible */
+}
+
+.contact-container {
+    background-color: #9ca0ad; 
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.contact-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Adjust height to fit the gif */
+    background: url("media/cuteflowers.gif") repeat-x; /* Repeat horizontally */
+    background-size: contain;
+}
+
+.contact-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'Georgia', serif;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-icon {
+    width: 65px; 
+    height: 65px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-icon:hover {
+    transform: scale(1.2);  /* Enlarges icon on hover */
+}
