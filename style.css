@@ -178,43 +178,110 @@ html {
     overflow: hidden;               /* Ensures rounded corners are visible */
 }
 
+.gif-strip {
+    width: 100vw;
+    height: 80px; /* Adjust the height based on your GIF size */
+    background: url('media/cuteflowers.gif') repeat-x; /* Repeats the GIF horizontally */
+    background-size: contain; /* Ensures the GIF fits properly */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    position: relative; /* Keeps it within the section */
+    left: 0;
+    top: 0;
+}
+
+#watch {
+    background-color: #abb0bf; /* Existing background */
+    padding-top: 0; /* Remove extra space */
+    margin-top: 0; /* Remove extra space */
+}
+
 .contact-container {
-    background-color: #9ca0ad; 
-    padding: 80px 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+    background: url("media/end.jpg") no-repeat center center;
+    background-size: cover;
     position: relative;
 }
 
-.contact-container::after {
+.contact-container::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 70px; /* Adjust height to fit the gif */
-    background: url("media/cuteflowers.gif") repeat-x; /* Repeat horizontally */
-    background-size: contain;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
 }
 
-.contact-title {
+.contact-details, .contact-form {
+    width: 45%;
+    z-index: 2;
+    color: #e3e3e4;
+}
+
+.contact-details h2 {
     font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    color: #e3e3e4
+}
+
+.contact-details p {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details i {
+    font-size: 30px;
+    color: white;  /* Makes icons white */
+    margin-right: 10px;
+}
+
+.contact-details a {
+    text-decoration: none; 
+    color: #e3e3e4;
+    font-weight: bold;
+}
+
+.contact-form {
+    background: #e3e3e4;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h2 {
+    font-size: 24px;
     margin-bottom: 20px;
     color: black;
     font-family: 'Georgia', serif;
 }
 
-.contact-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.contact-form input, .contact-form textarea {
+    background: #e3e3e4;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.contact-icon {
-    width: 65px; 
-    height: 65px;
-    transition: transform 0.3s ease-in-out;
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #717587;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.contact-icon:hover {
-    transform: scale(1.2);  /* Enlarges icon on hover */
+.contact-form button:hover {
+    background: #454754;
 }

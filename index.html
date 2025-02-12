@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYUAD Campus in Bloom</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 
@@ -49,6 +50,7 @@
     </section>
 
     <section id="watch" class="watch-container">
+        <div class="gif-strip"></div>
         <h2 class="watch-title">Watch Now</h2>
         <div class="video-container">            
             <iframe src="https://drive.google.com/file/d/1AG2pZH_ewaR2nkLD0PLXfz2y5csHyIrQ/preview" 
@@ -57,19 +59,28 @@
     </section>
 
     <section id="contact" class="contact-container">
-        <h2 class="contact-title">Contact</h2>
-        <div class="contact-icons">
-            <!-- Email Icon -->
-            <a href="mailto:sg8504@gmail.com" target="_blank">
-                <img src="media/email.png" alt="Email Icon" class="contact-icon">
-            </a>
-            <!-- Instagram Icon -->
-            <a href="https://www.instagram.com/siyona.g" target="_blank">
-                <img src="media/instagram.png" alt="Instagram Icon" class="contact-icon">
-            </a>
+        <div class="contact-details">
+            <h2>Contact</h2>
+            <p><i class="fab fa-instagram"></i> 
+                <a href="https://instagram.com/siyona.g" target="_blank"> @siyona.g</a>
+             </p>
+             <p><i class="fas fa-phone"></i> +971 503810565</p>
+             <p><i class="fas fa-envelope"></i> 
+                <a href="mailto:sg8504@gmail.com"> @sg8504@nyu.edu </a>
+             </p>                     
         </div>
-    </section>
-    
+        
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>    
     
 </body>
     
