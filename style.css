@@ -3,7 +3,8 @@ body {
     padding: 0;
     padding-top: 80px;
     font-family: Arial, sans-serif;    
-    text-align: center;    
+    text-align: center;
+    overflow-x: hidden;    
 }
 
 .home-section {
@@ -69,6 +70,7 @@ nav ul li {
     border: 2px solid black;
     border-radius: 25px;
     transition: all 0.3s ease;
+    color: black
 }
 
 .nav-btn:hover {
@@ -155,6 +157,10 @@ html {
     scroll-padding-top: 80px;
 }
 
+#about {
+    scroll-margin-top: 30px;
+}
+
 .watch-container {
     background-color: #c7cbd2; 
     padding: 80px 20px;
@@ -181,30 +187,33 @@ html {
 
 .gif-strip {
     width: 100vw;
-    height: 80px; /* Adjust the height based on your GIF size */
-    background: url('media/cuteflowers.gif') repeat-x; /* Repeats the GIF horizontally */
-    background-size: contain; /* Ensures the GIF fits properly */
+    height: 80px; 
+    background: url('media/cuteflowers.gif') repeat-x; 
+    background-size: contain; 
     margin: 0; /* Remove any margin */
     padding: 0; /* Remove any padding */
-    position: relative; /* Keeps it within the section */
+    position: relative; 
     left: 0;
     top: 0;
 }
 
 #watch {
-    background-color: #abb0bf; /* Existing background */
-    padding-top: 0; /* Remove extra space */
-    margin-top: 0; /* Remove extra space */
+    background-color: #abb0bf; 
+    padding-top: 0; 
+    margin-top: 0; 
+    scroll-margin-top: 25px;
 }
 
 .contact-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 80px;
     background: url("media/end.jpg") no-repeat center center;
     background-size: cover;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .contact-container::before {
@@ -217,10 +226,26 @@ html {
     background: rgba(0, 0, 0, 0.6); /* Dark overlay */
 }
 
-.contact-details, .contact-form {
+.contact-form {
+    margin-left: 25px;
     width: 45%;
     z-index: 2;
     color: #e3e3e4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.contact-details {
+    margin-left: 80px;
+    width: 30%;
+    z-index: 2;
+    color: #e3e3e4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left */
+    text-align: left;  /* Ensures text stays aligned to the left */
 }
 
 .contact-details h2 {
@@ -233,13 +258,14 @@ html {
 .contact-details p {
     font-size: 18px;
     display: flex;
-    align-items: center;
+    align-items: center;    
     gap: 10px;
+    width: fit-content;
 }
 
 .contact-details i {
     font-size: 30px;
-    color: white;  /* Makes icons white */
+    color: white;  
     margin-right: 10px;
 }
 
