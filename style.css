@@ -26,7 +26,7 @@ header {
     transform: translateX(-50%); /* Centers it horizontally */
     width: 100%; /* Prevents full width */
     padding: 5px;
-    background: rgba(247, 221, 221, 0.8); /* Ensures no background color */
+    background: rgba(247, 221, 221, 0.8); 
     z-index: 1000;
     display: flex;
     align-items: center;
