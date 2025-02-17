@@ -18,14 +18,48 @@ let currentIndex = 0;
 const carouselImage = document.getElementById("carousel-image");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
+const dotsContainer = document.querySelector(".dots-container");
+
+// Create dots dynamically
+images.forEach((_, index) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (index === currentIndex) dot.classList.add("active");
+    dot.addEventListener("click", () => goToImage(index));
+    dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".dot");
+
+function updateDots() {
+    // Remove 'active' from all dots
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    // Add 'active' to the correct dot
+    dots[currentIndex].classList.add("active");
+}
 
 prevBtn.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     carouselImage.src = images[currentIndex];
+    updateDots();
 });
 
 nextBtn.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % images.length;
     carouselImage.src = images[currentIndex];
+    updateDots();
 });
 
+function goToImage(index) {
+    currentIndex = index;
+    updateCarousel();
+}
+
+function updateCarousel() {
+    carouselImage.src = images[currentIndex];
+
+    // Update active dot
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[currentIndex].classList.add("active");
+}

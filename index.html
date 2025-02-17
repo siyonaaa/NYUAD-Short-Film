@@ -6,6 +6,7 @@
     <title>NYUAD Campus in Bloom</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="media/logo_icon.png">
 </head>
 
 
@@ -33,12 +34,16 @@
 
     <section id="about" class="about-container">
         <div class="carousel">
-            <button id="prev">&#10094;</button>
-            <div class="image-container">
-                <img id="carousel-image" src="media/1.jpg" alt="first image">
+            <div class="image-wrapper">
+                <button id="prev">&#10094;</button>
+                <div class="image-container">
+                    <img id="carousel-image" src="media/1.jpg" alt="first image">
+                </div>
+                <button id="next">&#10095;</button>
             </div>
-            <button id="next">&#10095;</button>
+            <div class="dots-container"></div> <!-- Stays below the image -->
         </div>
+        
         <div class="about-text">
             <h2 class="about-title">About the Video</h2>
             <p>“NYUAD Campus in Bloom” is a short movie about the beautiful flora of our campus. Sometimes flowers are 
