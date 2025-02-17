@@ -1,3 +1,4 @@
+/* General styles for the body */
 body {
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@ body {
     overflow-x: hidden;    
 }
 
+/* Styling for the main home section */
 .home-section {
     height: 100vh;
     background: url('media/background.jpg') no-repeat center center fixed;
@@ -19,12 +21,13 @@ body {
     padding: 0; 
 }
 
+/* Header styles */
 header {
-    position: fixed; /* Keeps it over the background */
+    position: fixed;                /* Keeps it over the background */
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* Centers it horizontally */
-    width: 100%; /* Prevents full width */
+    transform: translateX(-50%);    /* Centers it horizontally */
+    width: 100%;                    /* Prevents full width */
     padding: 5px;
     background: rgba(247, 221, 221, 0.8); 
     z-index: 1000;
@@ -34,6 +37,7 @@ header {
     backdrop-filter: blur(5px);
 }
 
+/* Logo styles */
 .logo {
     width: 100px; 
     height: auto;
@@ -44,9 +48,10 @@ header {
     height: auto;
 }
 
+/* Navigation styles */
 nav {
     display: flex;
-    justify-content: center; /* Ensures the nav buttons are centered */
+    justify-content: center;
     width: 100%;
     align-items: center;
 }
@@ -64,6 +69,7 @@ nav ul li {
     display: inline;
 }
 
+/* Navigation button styles */
 .nav-btn {
     text-decoration: none;
     padding: 10px 20px;
@@ -78,6 +84,7 @@ nav ul li {
     color: black;
 } 
 
+/* Title box styles */
 .title-box {
     margin-top: 100px;
     font-size: 56px;
@@ -88,6 +95,8 @@ nav ul li {
     flex-direction: column;
     align-items: center;
 }
+
+/* Different font styles for title */
 .title-line1 {
     font-family: 'Georgia', serif;
 }
@@ -97,6 +106,7 @@ nav ul li {
     text-align: center;
 }
 
+/* About section styles */
 .about-container {
     background-color: rgb(240, 212, 212);
     display: flex;
@@ -107,6 +117,7 @@ nav ul li {
     margin-top: 0;
 }
 
+/* Image carousel styles */
 .carousel {
     display: flex;
     align-items: center;    
@@ -135,6 +146,7 @@ nav ul li {
     object-fit: cover;
 }
 
+/* Button styles */
 button {
     background: none;
     border: none;
@@ -147,11 +159,12 @@ button:hover {
     color: gray;
 }
 
+/* Dots container for carousel navigation */
 .dots-container {
     display: flex;
     justify-content: center;
     margin-top: 10px;    
-    width: 100%;              /* Makes sure it spans the width */
+    width: 100%;           
            
 }
 
@@ -192,6 +205,7 @@ html {
     scroll-margin-top: 30px;
 }
 
+/* Watch section styles */
 .watch-container {
     background-color: #c7cbd2; 
     padding: 80px 20px;
@@ -211,18 +225,19 @@ html {
 }
 
 .video-container iframe {
-    border-radius: 15px;            /* Rounds the corners */
+    border-radius: 15px;                /* Rounds the corners */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); 
-    overflow: hidden;               /* Ensures rounded corners are visible */
+    overflow: hidden;                   /* Ensures rounded corners are visible */
 }
 
+/* Flower gif-strip in the watch page */
 .gif-strip {
     width: 100vw;
     height: 58px; 
     background: url('media/cuteflowers.gif') repeat-x; 
     background-size: contain; 
-    margin: 0; /* Remove any margin */
-    padding: 0; /* Remove any padding */
+    margin: 0; 
+    padding: 0; 
     position: relative; 
     left: 0;
     top: 0;
@@ -235,6 +250,7 @@ html {
     scroll-margin-top: 25px;
 }
 
+/* Contact section styles */
 .contact-container {
     display: flex;
     flex-direction: row;
@@ -254,7 +270,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.6);     /* Dark overlay */
 }
 
 .contact-form {
@@ -275,8 +291,8 @@ html {
     color: #e3e3e4;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns content to the left */
-    text-align: left;  /* Ensures text stays aligned to the left */
+    align-items: flex-start;                /* Aligns content to the left */
+    text-align: left;                       /* Ensures text stays aligned to the left */
 }
 
 .contact-details h2 {
@@ -320,6 +336,7 @@ html {
     font-family: 'Georgia', serif;
 }
 
+/* Form input fields */
 .contact-form input, .contact-form textarea {
     background: #e3e3e4;
     width: 100%;
@@ -329,6 +346,7 @@ html {
     border-radius: 5px;
 }
 
+/* Form submit button */
 .contact-form button {
     width: 100%;
     padding: 10px;
